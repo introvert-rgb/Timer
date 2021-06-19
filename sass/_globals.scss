@@ -1,0 +1,147 @@
+body {
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: $Veryverydarkblue;
+    .background {
+        position: relative;
+        .stars {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            background: url(../images/bg-stars.svg);
+            .hills {
+                position: absolute;
+                bottom: 0;
+                .mountain {
+                    height: 150px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .foreground {
+        position: absolute;
+        top: 0;
+        color: white;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        .items {
+            height: 100vh;
+            width: 100vw;
+        }
+        .head {
+            text-align: center;
+            letter-spacing: 0.3em;
+            font-size: 1em;
+        }
+        .counterContainer {
+            margin-bottom: 4em;
+            .top-box {
+                height: 30px;
+                width: 65px;
+                background: $Darkdesaturatedblue;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                position: relative;
+                margin-left: .5em;
+                transform-style: preserve-3d;
+                // margin-bottom: .1em;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: inherit;
+                    width: inherit;
+                    background: $Veryverydarkblue;
+                    clip-path: circle(7.1% at 0 100%);
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    height: inherit;
+                    width: inherit;
+                    background: $Veryverydarkblue;
+                    clip-path: circle(7.1% at 100% 100%);
+                }
+            }
+            .bottom-box {
+                height: 30px;
+                width: 65px;
+                background: $Darkdesaturatedblue;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                position: relative;
+                margin-left: .5em;
+                box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.7);
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: inherit;
+                    width: inherit;
+                    background: $Veryverydarkblue;
+                    clip-path: circle(7.0% at 0 0);
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: inherit;
+                    width: inherit;
+                    background: $Veryverydarkblue;
+                    clip-path: circle(7.2% at 100% 0);
+                }
+            }
+            .label {
+                padding-top: 2em;
+                font-weight: normal;
+                font-size: .5em;
+                position: absolute;
+                left: 50%;
+                width: 100%;
+                transform: translate(-50%);
+                bottom: -83%;
+                color: $grayishBlue;
+            }
+        }
+    }
+}
+
+.cover {
+    position: relative;
+    color: $Softred;
+    perspective: 1000px;
+    .unit {
+        position: absolute;
+        z-index: 1;
+        top: 7px;
+        color: $Softred;
+        font-size: 2em;
+        left: 54%;
+        transform: translate(-50%);
+    }
+    hr {
+        position: absolute;
+        z-index: 10;
+        height: 10px;
+        top: 14px;
+        width: 100%;
+        background-color: $Veryverydarkblue;
+        box-shadow: 0px 5px 6px -3px #333;
+    }
+}
+
+svg:not(.icons) {
+    margin-left: 1em;
+}

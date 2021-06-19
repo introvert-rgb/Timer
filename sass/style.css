@@ -1,0 +1,174 @@
+body {
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: #191a24;
+}
+
+.main .background {
+  position: relative;
+}
+
+.main .background .stars {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: url(../images/bg-stars.svg);
+}
+
+.main .background .stars .hills {
+  position: absolute;
+  bottom: 0;
+}
+
+.main .background .stars .hills .mountain {
+  height: 150px;
+  width: 100%;
+}
+
+.main .foreground {
+  position: absolute;
+  top: 0;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.main .foreground .items {
+  height: 100vh;
+  width: 100vw;
+}
+
+.main .foreground .head {
+  text-align: center;
+  letter-spacing: 0.3em;
+  font-size: 1em;
+}
+
+.main .foreground .counterContainer {
+  margin-bottom: 4em;
+}
+
+.main .foreground .counterContainer .top-box {
+  height: 30px;
+  width: 65px;
+  background: #343650;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  margin-left: .5em;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.main .foreground .counterContainer .top-box::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  background: #191a24;
+  -webkit-clip-path: circle(7.1% at 0 100%);
+          clip-path: circle(7.1% at 0 100%);
+}
+
+.main .foreground .counterContainer .top-box::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: inherit;
+  width: inherit;
+  background: #191a24;
+  -webkit-clip-path: circle(7.1% at 100% 100%);
+          clip-path: circle(7.1% at 100% 100%);
+}
+
+.main .foreground .counterContainer .bottom-box {
+  height: 30px;
+  width: 65px;
+  background: #343650;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  margin-left: .5em;
+  -webkit-box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.7);
+}
+
+.main .foreground .counterContainer .bottom-box::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  background: #191a24;
+  -webkit-clip-path: circle(7% at 0 0);
+          clip-path: circle(7% at 0 0);
+}
+
+.main .foreground .counterContainer .bottom-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: inherit;
+  width: inherit;
+  background: #191a24;
+  -webkit-clip-path: circle(7.2% at 100% 0);
+          clip-path: circle(7.2% at 100% 0);
+}
+
+.main .foreground .counterContainer .label {
+  padding-top: 2em;
+  font-weight: normal;
+  font-size: .5em;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: -83%;
+  color: #8486a9;
+}
+
+.cover {
+  position: relative;
+  color: #fb6087;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.cover .unit {
+  position: absolute;
+  z-index: 1;
+  top: 7px;
+  color: #fb6087;
+  font-size: 2em;
+  left: 54%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.cover hr {
+  position: absolute;
+  z-index: 10;
+  height: 10px;
+  top: 14px;
+  width: 100%;
+  background-color: #191a24;
+  -webkit-box-shadow: 0px 5px 6px -3px #333;
+          box-shadow: 0px 5px 6px -3px #333;
+}
+
+svg:not(.icons) {
+  margin-left: 1em;
+}
+/*# sourceMappingURL=style.css.map */
